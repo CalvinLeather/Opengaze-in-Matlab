@@ -4,3 +4,5 @@ Based in part off of mperez4/gazepoint_toolkit, but with support for more recent
 Stable and in use, but still adding features, might change to OOP soonish.
 
 KbWaitEyeTracking and waitForCalibration are designed to work with Psychtoolbox, and will only work if you have it installed.
+
+See eyeTrackingAdmin.m for an example usage pattern.
