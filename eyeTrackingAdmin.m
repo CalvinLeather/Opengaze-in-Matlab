@@ -6,15 +6,15 @@ function [ obj ] = eyeTrackingAdmin( mode, obj )
 %eyetracker = eyeTrackingAdmin('calibrate',eyetracker);
 %Have subject do something
 %While subject is doing something:
-%setState(obj, 'ENABLE_SEND_DATA', '1');
-%setState(obj, 'ENABLE_SEND_POG_FIX', '1');
+%setState(eyetracker, 'ENABLE_SEND_DATA', '1');
+%setState(eyetracker, 'ENABLE_SEND_POG_FIX', '1');
 %After they finish:
-%setState(obj, 'ENABLE_SEND_POG_FIX', '0');
-%setState(obj, 'ENABLE_SEND_DATA', '0');
+%setState(eyetracker, 'ENABLE_SEND_POG_FIX', '0');
+%setState(eyetracker, 'ENABLE_SEND_DATA', '0');
 %gp = {};counter = 0;
-%while (get(obj.client_socket, 'BytesAvailable') > 0)
+%while (get(eyetracker.client_socket, 'BytesAvailable') > 0)
 %   counter = counter+1;
-%   gp{counter} = fscanf(obj.client_socket);
+%   gp{counter} = fscanf(eyetracker.client_socket);
 %end
 %Alternatively, If you have psychtoolbox installed, use KBWaitEyetrack to
 %collect eyetracking data while waiting for subject response.
