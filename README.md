@@ -10,7 +10,7 @@ KbWaitEyeTracking and waitForCalibration are designed to work with Psychtoolbox,
 <h3>Usage Patterns</h3>
 <p>
 There are two usage patterns. In the simpler case, you can use this library in conjunction with psychtoolbox. In this case, you can use the KbWaitEyetracking and waitForCalibration functions to perform common eyetracking tasks. A typical usage would look like the following:
-
+<pre>
 <code>
 eyetracker = eyeTrackingAdmin('start');
 eyetracker = waitForCalibration('calibrate',eyetracker);
@@ -24,10 +24,11 @@ for trial_n = 1:n_trials:
 end
 eyetracker = eyeTrackingAdmin('end');
 </code>
+</pre>
 
 <p>
 The more advanced usage pattern, which doesn't require psychtoolbox, would look like the following:</p>
-
+<pre>
 <code>
 eyetracker = eyeTrackingAdmin('start');
 eyetracker = eyeTrackingAdmin('calibrate',eyetracker);
@@ -46,6 +47,7 @@ setState(eyetracker, 'ENABLE_SEND_POG_FIX', '0');
 setState(eyetracker, 'ENABLE_SEND_DATA', '0');
 eyetracker = eyeTrackingAdmin('end');
 </code>
+</pre>
 
 <p>
 This usage pattern is required if you want to redraw stimuli during the period where the subject is considering the stimuli (for example, to make the stimuli responsive to a subject's keypress)
