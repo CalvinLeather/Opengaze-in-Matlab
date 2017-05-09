@@ -7,6 +7,8 @@ Stable and in use.</p>
 <p>
 KbWaitEyeTracking and waitForCalibration are designed to work with Psychtoolbox, and will only work if you have it installed.
 </p>
+<h3>Installation/Setup</h3>
+<p>Download this repository, and unzip into your expeirment's project folder. Make sure the folder is added to the matlab path. Also, make sure that the gp3 client is running. This software is a free download from the gazepoint website once you've purchased a camera. Intructions should be included with the camera.</p>
 <h3>Usage Patterns</h3>
 <p>
 There are two usage patterns. In the simpler case, you can use this library in conjunction with psychtoolbox. In this case, you can use the KbWaitEyetracking and waitForCalibration functions to perform common eyetracking tasks. A typical usage would look like the following:
