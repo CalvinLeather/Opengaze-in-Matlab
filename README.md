@@ -15,7 +15,7 @@ There are two usage patterns. In the simpler case, you can use this library in c
 <pre>
 <code>
 eyetracker = eyeTrackingAdmin('start');
-eyetracker = waitForCalibration('calibrate',eyetracker);
+[eyetracker, wPtr] = waitForCalibration(eyetracker, wPtr) //wPtr is the psychtoolbox window pointer
 
 %prep stimuli, ect
 
